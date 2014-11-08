@@ -5,3 +5,28 @@
   -o-#{$name}: #{$argument};
   #{$name}: #{$argument};
 }
+
+@mixin css-arrow($border-color, $background-color, $width){
+  &::before, &::after {
+    left: 50%;
+    top: -1px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &::before {
+    border-color: transparentize($border-color, 1);
+    border-top-color: $border-color;
+    border-width: #{$width + 1}px;
+    margin-left: -#{$width + 1}px;
+  }
+  &::after {
+    border-color: transparentize($background-color, 1);
+    border-top-color: $background-color;
+    border-width: #{$width}px;
+    margin-left: -#{$width}px;
+  }
+}

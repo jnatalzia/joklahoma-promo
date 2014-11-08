@@ -3,3 +3,81 @@
 @import 'colors';
 @import 'mixins';
 
+.cf::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  color: $charcoal;
+}
+
+.row-content {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.header {
+  font-size: 36px;
+  position: relative;
+}
+
+.header--confession {
+  @extend .header;
+  font-size: 80px;
+  left: -6px;
+  line-height: 80px;
+}
+
+.subheader {
+  font-size: 16px;
+}
+
+.info__silver {
+  margin: 0 auto;
+  width: 432px;
+}
+
+.silver__text {
+  font-size: 16px;
+}
+
+.silver__text--emphasized {
+  @extend .silver__text;
+  font-size: 24px;
+}
+
+.row-border {
+  border-top: 1px solid $charcoal;
+  margin: 10px 0;
+  position: relative;
+  height: 1px;
+  @include css-arrow($charcoal, $white, 8);
+}
+
+.perk {
+  float: left;
+  padding-right: 15px;
+  width: 33%;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.perk__header {
+  font-size: 16px;
+}
+
+.perk__desc {
+  font-size: 14px;
+}
+
+.testimonials__container {
+  margin: 0 auto;
+  width: 700px;
+}
+.testimonial {
+  float: left;
+  width: 50%;
+}
