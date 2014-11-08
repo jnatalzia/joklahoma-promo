@@ -30,3 +30,7 @@
     margin-left: -#{$width}px;
   }
 }
+
+@mixin breakpoint($point-width) {
+  @media (max-width: $point-width) { @content ; }
+}
