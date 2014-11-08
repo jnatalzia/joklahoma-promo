@@ -79,6 +79,9 @@ module.exports = function(grunt) {
         files: ['app/javascripts/*.js', 'app/javascripts/**/*.js'],
         tasks: ['copy:js']
       },
+      options: {
+        livereload: true,
+      },
     }
   });
 
@@ -91,6 +94,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task.
-  grunt.registerTask('default', ['clean','sass','haml','copy']);
+  grunt.registerTask('default', ['clean','sass','haml','copy', 'watch']);
 
 };
