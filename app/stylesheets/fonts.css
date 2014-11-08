@@ -1,10 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 
-.roboto {
-  font-family: font-family: 'Roboto', sans-serif;
+.roboto, .roboto-light {
+  font-family: 'Roboto', sans-serif;
 }
 
 .roboto-light {
-  @extend .roboto;
   font-weight: 300;
 }
