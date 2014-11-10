@@ -34,3 +34,10 @@
 @mixin breakpoint($point-width) {
   @media (max-width: $point-width) { @content ; }
 }
+
+@mixin absolute-position($h, $v) {
+  left: $h;
+  position: absolute;
+  top: $v;
+  @include transform(translateX(-50%), translateY(-50%));
+}

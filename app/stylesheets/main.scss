@@ -2,6 +2,7 @@
 @import 'fonts.css';
 @import 'colors';
 @import 'mixins';
+@import "compass/css3/transform";
 
 .cf::after {
   content: "";
@@ -13,6 +14,29 @@ body {
   color: $charcoal;
 }
 
+.content--main {
+  height: 100%
+}
+
+.azure {
+  color: $azure;
+}
+
+.row--info {
+  background-color: #010101;
+  background-image: url('../img/oklahoma-bg.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  color: $white;
+  height: 95%;
+  padding: 0;
+  position: relative;
+}
+
+.row {
+  padding: 40px 15px;
+}
+
 .row-content {
   margin: 0 auto;
   max-width: 100%;
@@ -21,7 +45,14 @@ body {
 
 .header {
   font-size: 36px;
+  line-height: 40px;
+  padding-bottom: 35px;
   position: relative;
+}
+
+.header--convinced {
+  @extend .header;
+  padding-bottom: 0;
 }
 
 .header--confession {
@@ -29,6 +60,7 @@ body {
   font-size: 80px;
   left: -6px;
   line-height: 80px;
+  padding-bottom: 0;
 }
 
 .subheader {
@@ -36,9 +68,20 @@ body {
 }
 
 .info__silver {
-  margin: 0 auto;
+  background-color: transparentize($black, .5);
   max-width: 100%;
-  width: 432px;
+  padding: 20px;
+  width: 472px;
+  @include absolute-position(50%, 45%);
+  @include breakpoint(960px) {
+    
+    @include absolute-position(50%, 40%);
+  }
+}
+
+.info__confession {
+  position: relative;
+  padding: 5% 0 0;
 }
 
 .silver__text {
@@ -48,45 +91,117 @@ body {
 .silver__text--emphasized {
   @extend .silver__text;
   font-size: 24px;
+  line-height: 26px;
 }
 
 .row-border {
   border-top: 1px solid $charcoal;
-  margin: 10px 0;
   position: relative;
   height: 1px;
   @include css-arrow($charcoal, $white, 8);
 }
 
+.row-border--no-arrow {
+  @extend .row-border;
+  &::before, &::after {
+    content: none;
+  }
+}
+
+.row-border--light-grey {
+  @extend .row-border;
+  &::after {
+    border-top-color: $light-grey;
+  }
+}
+
+.row--testimonials {
+  background-color: $light-grey;
+}
+
 .perk {
   float: left;
+  margin-bottom: 15px;
   padding-right: 15px;
   width: 33%;
   &:last-child {
     padding-right: 0;
   }
   @include breakpoint(960px) {
+    margin-bottom: 0;
     width: 100%;
   }
 }
 
+.perk__image {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.perk__image--glasses {
+  @extend .perk__image;
+  background-image: url('../img/glasses.svg');
+}
+.perk__image--code {
+  @extend .perk__image;
+  background-image: url('../img/web.svg');
+  background-size: 65%;
+}
+.perk__image--heart {
+  @extend .perk__image;
+  background-image: url('../img/heart.svg');
+  background-size: 60%;
+}
+
 .perk__header {
   font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .perk__desc {
   font-size: 14px;
 }
 
+.testimonials {
+  .subheader {
+    margin-bottom: 20px;
+  }
+}
+
 .testimonials__container {
   margin: 0 auto;
+  margin-bottom: 20px;
   max-width: 100%;
-  width: 700px;
+  width: 500px;
 }
 .testimonial {
   float: left;
   width: 50%;
   @include breakpoint(960px) {
+    margin-bottom: 15px;
     width: 100%;
   }
+}
+.testimonial__quote {
+  font-style: italic;
+  &::before {
+    background-image: url('../img/quote.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: " ";
+    display: block;
+    height: 25px;
+    width: 25px;
+  }
+}
+.testimonial__author {
+  font-size: 12px;
+  margin-top: 5px;
+
 }

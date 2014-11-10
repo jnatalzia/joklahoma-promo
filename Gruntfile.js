@@ -48,7 +48,10 @@ module.exports = function(grunt) {
           src: '**/*.css',
           dest: 'public/stylesheets',
           ext: '.css'
-        }]
+        }],
+        options: {
+          compass: true
+        }
       }
     },
     haml: {
