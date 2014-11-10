@@ -1,0 +1,22 @@
+@import "compass/css3/transition";
+
+.button {
+  border: 2px solid $charcoal;
+  color: $charcoal;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include transition(.15s border-color ease, .15s color ease);
+  &:hover {
+    border-color: $azure;
+    color: $azure;
+    @include transition(.15s border-color ease, .15s color ease);
+  }
+}
+
+.button-container {
+  text-align: center;
+}

@@ -63,14 +63,14 @@
                 When I saw web developer I thought hey, I know someone who's good at that!
               .testimonial__author
                 Shaun Paduano - UX Designer at AKQA
-          .work-link
-            And of course here's a link to view some of my recent work
-          .button
-            The recent work link 
+          .button-container
+            %a.button{:href => "/work"}
+              Recent Work
       .row-border--light-grey
       .row.row--contact
         .contact.row-content
           .header.roboto
-            Ready now?!
-          .button
-            The contact me now link
+            Let's pull the trigger on this.
+          .button-container
+            %a.button{:href => "/contact?subject=Joklahoma%20Promo"}
+              Contact me

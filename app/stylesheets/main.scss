@@ -1,6 +1,7 @@
 @import 'normalize.css';
 @import 'fonts.css';
 @import 'colors';
+@import 'buttons';
 @import 'mixins';
 @import "compass/css3/transform";
 
@@ -35,6 +36,9 @@ body {
 
 .row {
   padding: 40px 15px;
+  @include breakpoint(960px) {
+    padding: 20px 15px;
+  }
 }
 
 .row-content {
@@ -82,6 +86,9 @@ body {
 .info__confession {
   position: relative;
   padding: 5% 0 0;
+  @include breakpoint(960px) {
+    padding-top: 15px;
+  }
 }
 
 .silver__text {
@@ -167,17 +174,13 @@ body {
   font-size: 14px;
 }
 
-.testimonials {
-  .subheader {
-    margin-bottom: 20px;
-  }
-}
-
 .testimonials__container {
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 40px auto;
   max-width: 100%;
   width: 500px;
+  @include breakpoint(960px) {
+    width: 350px;
+  }
 }
 .testimonial {
   float: left;
@@ -203,5 +206,8 @@ body {
 .testimonial__author {
   font-size: 12px;
   margin-top: 5px;
+}
 
+.work-link {
+  margin-bottom: 20px;
 }
