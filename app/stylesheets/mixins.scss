@@ -39,5 +39,5 @@
   left: $h;
   position: absolute;
   top: $v;
-  @include transform(translateX(-50%), translateY(-50%));
+  @include transform(translateX(-50%) translateY(-50%));
 }

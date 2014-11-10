@@ -4,7 +4,11 @@
   %head
     %title Joklahoma
     %link{rel: "stylesheet", href: "stylesheets/main.css"}
+    %script{src: "javascripts/lib/jquery-1.11.1.min.js"}
+    %script{src: "javascripts/main.js"}
   %body
+    .loading-modal
+      %img{alt: "", src: "img/loader.gif"}
     .content--main
       .row.row--info
         .info.row-content
@@ -54,7 +58,7 @@
             Here are some actual testimonials from people who aren't played by me.
           .testimonials__container.cf
             .testimonial
-              .testimonial__quote
+              .testimonial__quote.lowered
                 [Joe is] a god of programming
               .testimonial__author
                 Ryan Stush - Interactive Developer

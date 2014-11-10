@@ -5,6 +5,20 @@
 @import 'mixins';
 @import "compass/css3/transform";
 
+.loading-modal {
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  img {
+    display: block;
+    height: 100px;
+    width: 100px;
+    @include absolute-position(50%, 50%);
+  }
+}
+
 .cf::after {
   content: "";
   display: table;
@@ -76,10 +90,9 @@ body {
   max-width: 100%;
   padding: 20px;
   width: 472px;
-  @include absolute-position(50%, 45%);
+  @include absolute-position(50%, 50%);
   @include breakpoint(960px) {
-    
-    @include absolute-position(50%, 40%);
+    @include absolute-position(50%, 60%);
   }
 }
 
@@ -201,6 +214,14 @@ body {
     display: block;
     height: 25px;
     width: 25px;
+  }
+  &.lowered {
+    &::before {
+      margin-bottom: 15px;
+      @include breakpoint(960px) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 .testimonial__author {
