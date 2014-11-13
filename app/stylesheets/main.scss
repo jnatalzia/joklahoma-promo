@@ -10,7 +10,7 @@
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   img {
     display: block;
     height: 100px;
@@ -117,8 +117,9 @@ body {
 
 .row-border {
   border-top: 1px solid $charcoal;
-  position: relative;
   height: 1px;
+  position: relative;
+  z-index: 2;
   @include css-arrow($charcoal, $white, 8);
 }
 

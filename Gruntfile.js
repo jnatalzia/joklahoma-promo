@@ -33,6 +33,13 @@ module.exports = function(grunt) {
         files : [{expand: true, cwd: 'app/javascripts', src: ['**'], dest: 'public/javascripts'}]
       }
     },
+    uglify: {
+      js: {
+        files: {
+          'public/javascripts/main.min.js': ['app/javascripts/main.js']
+        }
+      }
+    },
     sass: {
       dist: {
         files: [{
@@ -95,8 +102,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task.
-  grunt.registerTask('default', ['clean','sass','haml','copy', 'watch']);
+  grunt.registerTask('default', ['clean','sass','haml','copy', 'uglify', 'watch']);
 
 };

@@ -1,5 +1,5 @@
 {
-  "name": "Joklahoma Promo",
+  "name": "joklahoma_promo",
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-haml": "^0.2.0",
-    "grunt-contrib-copy": "^0.5.0"
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-uglify": "^0.6.0"
   }
 }

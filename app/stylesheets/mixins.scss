@@ -8,14 +8,14 @@
 
 @mixin css-arrow($border-color, $background-color, $width){
   &::before, &::after {
-    left: 50%;
-    top: -1px;
     border: solid transparent;
+    top: -1px;
     content: " ";
     height: 0;
-    width: 0;
+    left: 50%;
     position: absolute;
     pointer-events: none;
+    width: 0;
   }
   &::before {
     border-color: transparentize($border-color, 1);
