@@ -50,8 +50,9 @@ body {
 
 .row {
   padding: 40px 15px;
+  position: relative;
   @include breakpoint(960px) {
-    padding: 20px 15px;
+    //padding: 40px 15px;
   }
 }
 
@@ -231,4 +232,56 @@ body {
 
 .work-link {
   margin-bottom: 20px;
+}
+
+.row--contact {
+  background-color: #010101;
+  padding: 60px 0;
+  @include breakpoint(960px) {
+    padding: 40px 0;
+  }
+  .header {
+    color: $white;
+    text-align: center;
+  }
+}
+
+.footer-icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.footer-icon--github {
+  @extend .footer-icon;
+  background-image: url('../img/github_white.svg');
+  &:hover {
+    background-image: url('../img/github_blue.svg');
+  }
+}
+
+.footer-icon--twitter {
+  @extend .footer-icon;
+  background-image: url('../img/twitter_white.svg');
+  &:hover {
+    background-image: url('../img/twitter_blue.svg');
+  }
+}
+.footer {
+  bottom: 10px;
+  position: absolute;
+  right: 20px;
+  @include breakpoint(960px) {
+    bottom: 0;
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    right: 0;
+  }
 }
