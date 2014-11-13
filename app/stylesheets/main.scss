@@ -5,6 +5,10 @@
 @import 'mixins';
 @import "compass/css3/transform";
 
+.loading {
+  overflow: hidden;
+}
+
 .loading-modal {
   background-color: $white;
   height: 100%;
